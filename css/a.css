@@ -1,0 +1,123 @@
+/* Analytics A Test */
+
+/*
+ * Global
+ */
+ body {
+    font-size: .875rem;
+}
+.h1, h1 {
+    font-size: 1.75rem;
+}
+.h2, h2 {
+    font-size: 1.25rem;
+}
+.h3, h3 {
+    font-size: 1rem;
+}
+.h4, h4 {
+    font-size: .875rem;
+}
+.interactive {
+	border: 1px solid #007bff !important;
+}
+.success {
+  border: 1px solid #28a745 !important;
+}
+
+/*
+ * Sidebar
+ */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 56px 15px 0;
+}
+.sidebar-inner {
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+	padding: 0
+}
+.sidebar-inner.first {
+	padding-left: 0;
+}
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 56px);
+  /*overflow-x: hidden;
+  overflow-y: auto;*/
+}
+.sidebar-inner .sidebar-sticky {
+	padding: 15px;
+}
+.card {
+	margin-bottom: 15px;
+}
+.card-header,
+.list-group-item {
+	padding: .5rem .75rem;
+}
+.card-body {
+	padding: .75rem;
+}
+.card-body .form-group {
+	margin-bottom: 0;
+}
+.draggable {
+	cursor: move;
+}
+.ui-draggable-handle {
+	z-index: 500;
+}
+.ui-draggable-dragging {
+	border-radius: .25rem !important;
+	width: 200px;
+}
+.ui-droppable {
+	min-height: 38px;
+}
+.pie-chart {
+  display: none;
+}
+/*@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}*/
+
+/*
+ * Content
+ */
+#main {
+  padding-top: 71px;
+  height: 100vh;
+}
+.visualization-area {
+	height: 100%;
+}
+.visualization {
+	width: 100%;
+}
+.visualization .card-body {
+	overflow: hidden;
+}
+.visualization-placeholder .chart-type {
+	font-size: 2rem;
+}
+.visualization-placeholder {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.visualization-chart {
+	display: none;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+    width: 100%;
+}
+
