@@ -4,190 +4,160 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/fontawesome.min.css">
-	<link rel="stylesheet" href="css/chart.min.css">
-	<link rel="stylesheet" href="css/jquery-ui.min.css">
-	<link rel="stylesheet" href="css/a.css">
-    <title>Business Intelligence & Analytics Tool A</title>
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/chart.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/a.css">
+    <title>Tool A - Business Intelligence & Analytics Tools Comparision</title>
   </head>
   <body>
-	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
-		<a class="navbar-brand" href="#">Business Intelligence & Analytics Tool A</a>
-	</nav>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
+      <a class="navbar-brand">Business Intelligence & Analytics Tool A</a>
+    </nav>
     <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-4 bg-light sidebar">
-			  <div class="sidebar-sticky">
-			  <div class="row">
-				<div class="col-md-6 bg-light sidebar-inner first">
-					<div class="sidebar-sticky">
-						<h4><i class="fas fa-database"></i> Datasets</h4>
-						<div class="card">
-						  <div class="card-header">
-							Dimensions
-						  </div>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Horizontal"><i class="fa fa-clock fa-fw"></i> Date</li>
-								<li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Time</li>
-								<li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Month</li>
-								<li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> City</li>
-								<li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Country</li>
-								<li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Region</li>
-								<li class="list-group-item"><i class="fa fa-coins fa-fw" aria-hidden="true"></i> Currency</li>
-							</ul>
-						</div>
-						<div class="card">
-						  <div class="card-header">
-							Measures
-						  </div>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Horizontal"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer</li>
-								<li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Color By"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Amount</li>
-								<li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Items</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 bg-light sidebar-inner last">
-					<div class="sidebar-sticky">
-						<h4><i class="fas fa-filter"></i> Filter</h4>
-						<div class="card">
-						  <div class="card-header">
-							Month
-						  </div>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">
-								<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="January">
-							<label class="form-check-label" for="January">January 2020</label>
-						</div>
-								</li>
-								<li class="list-group-item">
-								<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="February">
-							<label class="form-check-label" for="February">February 2020</label>
-						</div>
-								</li>
-								<li class="list-group-item">
-								<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="March" checked>
-							<label class="form-check-label" for="March">March 2020</label>
-						</div>
-								</li>
-								
-								<li class="list-group-item">
-								<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="April" checked>
-							<label class="form-check-label" for="April">April 2020</label>
-						</div>
-								</li>
-							</ul>
-						</div>
-						<h4 class="mt-4"><i class="fas fa-pencil-alt"></i> Editor</h4>
-						<div class="card">
-						  <div class="card-header">
-							Visualization
-						  </div>
-						  <div class="card-body">
-						  <div class="form-group">
-							<select class="chart-type form-control" id="visualization">
-							  <option selected>Bar Chart</option>
-							  <option>Line Chart</option>
-							  <option>Pie Chart</option>
-							  <option>Heat Map</option>
-							  <option>Area Chart</option>
-							  <option>Combo Chart</option>
-							</select>
-						  </div>
-						  </div>
-						</div>
-						<div class="card bar-chart interactive">
-						  <div class="card-header ">
-							Vertical
-						  </div>
-						  <div class="card-body droppable">
-						  </div>
-						</div>
-						<div class="card bar-chart interactive">
-						  <div class="card-header">
-							Horizontal
-						  </div>
-						  <div class="card-body droppable">
-						  </div>
-						</div>
-						<div class="card interactive">
-						  <div class="card-header">
-							Color By
-						  </div>
-						  <div class="card-body droppable">
-						  </div>
-						</div>
-						<div class="card pie-chart">
-						  <div class="card-header">
-							Break By
-						  </div>
-						  <div class="card-body">
-						  </div>
-						</div>
-						<div class="card pie-chart">
-						  <div class="card-header">
-							Size By
-						  </div>
-						  <div class="card-body">
-						  </div>
-						</div>
-						<div class="card pie-chart">
-						  <div class="card-header">
-							Tooltip
-						  </div>
-						  <div class="card-body">
-						  </div>
-						</div>
-					</div>
-				</div>
-				</div>
-			  </div>
-			</div>
-
-
-			<main id="main" role="main" class="col-md-8 ml-sm-auto col-lg-8">
-			
-			<div class="visualization-area d-flex align-items-stretch">
-			
-				<div class="card visualization align-items-stretch">
-				  <div class="card-header">
-					Visualization 1
-				  </div>
-				  <div class="card-body">
-					<div class="visualization-placeholder text-center">
-						<div class="chart-type">
-							<i class="fas fa-chart-bar"></i>
-						</div>
-						<div class="chart-name">
-							<h3>Bar Chart</h3>
-						</div>
-						<div class="chart-instructions">
-							Add one or more attributes and one or more metrics to create a chart.
-						</div>
-					</div>
-					<div class="visualization-chart">
-						<canvas class="w-100" width="100%" height="80%" id="demochart"></canvas>
-					</div>
-				  </div>
-				</div>
-				
-			</div>
-
-			  
-
-			</main>
-		</div>
-	</div>
+      <div class="row">
+        <div class="col-md-4 bg-light sidebar">
+          <div class="sidebar-sticky">
+            <div class="row">
+              <div class="col-md-6 bg-light sidebar-inner first">
+                <div class="sidebar-sticky">
+                  <h4><i class="fas fa-database"></i> Datasets</h4>
+                  <div class="card">
+                    <div class="card-header">Dimensions</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Horizontal"><i class="fa fa-clock fa-fw"></i> Date</li>
+                      <li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Time</li>
+                      <li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Month</li>
+                      <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> City</li>
+                      <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Country</li>
+                      <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Region</li>
+                      <li class="list-group-item"><i class="fa fa-coins fa-fw" aria-hidden="true"></i> Currency</li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-header">Measures</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Horizontal"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer</li>
+                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Color By"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Amount</li>
+                      <li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Items</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 bg-light sidebar-inner last">
+                <div class="sidebar-sticky">
+                  <h4><i class="fas fa-filter"></i> Filter</h4>
+                  <div class="card">
+                    <div class="card-header">Month</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                      <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="January">
+                    <label class="form-check-label" for="January">January 2020</label>
+                  </div>
+                      </li>
+                      <li class="list-group-item">
+                      <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="February">
+                    <label class="form-check-label" for="February">February 2020</label>
+                  </div>
+                      </li>
+                      <li class="list-group-item">
+                      <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="March" checked>
+                    <label class="form-check-label" for="March">March 2020</label>
+                  </div>
+                      </li>
+                      
+                      <li class="list-group-item">
+                      <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="April" checked>
+                    <label class="form-check-label" for="April">April 2020</label>
+                  </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="mt-4"><i class="fas fa-pencil-alt"></i> Editor</h4>
+                  <div class="card">
+                    <div class="card-header">Visualization</div>
+                    <div class="card-body">
+                    <div class="form-group">
+                    <select class="chart-type form-control" id="visualization">
+                      <option selected>Bar Chart</option>
+                      <option>Line Chart</option>
+                      <option>Pie Chart</option>
+                      <option>Heat Map</option>
+                      <option>Area Chart</option>
+                      <option>Combo Chart</option>
+                    </select>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="card bar-chart interactive">
+                    <div class="card-header ">Vertical</div>
+                    <div class="card-body droppable">
+                    </div>
+                  </div>
+                  <div class="card bar-chart interactive">
+                    <div class="card-header">Horizontal</div>
+                    <div class="card-body droppable">
+                    </div>
+                  </div>
+                  <div class="card interactive">
+                    <div class="card-header">Color By</div>
+                    <div class="card-body droppable">
+                    </div>
+                  </div>
+                  <div class="card pie-chart">
+                    <div class="card-header">Break By</div>
+                    <div class="card-body">
+                    </div>
+                  </div>
+                  <div class="card pie-chart">
+                    <div class="card-header">Size By</div>
+                    <div class="card-body">
+                    </div>
+                  </div>
+                  <div class="card pie-chart">
+                    <div class="card-header">Tooltip</div>
+                    <div class="card-body">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      	</div>
+	      <main id="main" role="main" class="col-md-8 ml-sm-auto col-lg-8">
+	        <div class="visualization-area d-flex align-items-stretch">
+	          <div class="card visualization align-items-stretch">
+	            <div class="card-header">Visualization 1</div>
+	            <div class="card-body">
+		            <div class="visualization-placeholder text-center">
+		              <div class="chart-type">
+		                <i class="fas fa-chart-bar"></i>
+		              </div>
+		              <div class="chart-name">
+		                <h3>Bar Chart</h3>
+		              </div>
+		              <div class="chart-instructions">
+		                Add one or more attributes and one or more metrics to create a chart.
+		              </div>
+		            </div>
+		            <div class="visualization-chart">
+		              <canvas class="w-100" width="100%" height="80%" id="demochart"></canvas>
+		            </div>
+	            </div>
+	          </div>
+	        </div>
+	      </main>
+      </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/chart.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/a.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/a.js"></script>
   </body>
 </html>

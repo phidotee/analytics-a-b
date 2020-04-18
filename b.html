@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/chart.min.css">
+    <link rel="stylesheet" href="css/b.css">
+    <title>Tool B - Business Intelligence & Analytics Tools Comparision</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
+      <a class="navbar-brand">Business Intelligence & Analytics Tool B</a>
+    </nav>
+    <div id="main" role="main" class="container-fluid">
+      <div class="row">
+        <div class="search bg-light col-md-12 ml-sm-auto col-lg-12">
+          <div class="form-group">
+            <label for="search-input">Start by asking a question and press Enter once done</label>
+            <a class="tips btn btn-outline-info btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" title="Tips" data-content="<p>Praesent sit amet sem quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Suspendisse auctor iaculis ante, nec lacinia libero.</p><p>Duis porttitor nisl eget ligula eleifend semper. Mauris fringilla tempus lacinia. Cras scelerisque tellus tellus, ullamcorper luctus risus pellentesque ac. Vestibulum ornare metus a blandit pharetra. Phasellus quis ultricies nisl.</p><p>Donec sed felis nunc. Integer ac turpis ac nulla vehicula iaculis. Suspendisse elementum auctor nunc, nec dapibus nisl. Etiam et lacus posuere, euismod orci a, rutrum massa.</p>"><i class="fas fa-question"></i> Tips</a>
+            <input type="text" class="form-control form-control-lg" id="search-input" placeholder="What is your question? See tips for ideas.">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="results col-md-9 ml-sm-auto col-lg-9">
+          <div class="visualization-area d-flex align-items-stretch">
+            <div class="card visualization align-items-stretch">
+              <div class="card-header">Visualization 1</div>
+              <div class="card-body">
+                <div class="visualization-placeholder text-center">
+                  <div class="chart-type">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <div class="chart-name">
+                    <h3>Bar Chart</h3>
+                  </div>
+                  <div class="chart-instructions">
+                    Add one or more attributes and one or more metrics to create a chart.
+                  </div>
+                </div>
+                <div class="loader text-center">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+                <div class="visualization-chart">
+                  <canvas class="w-100" width="100%" height="80%" id="demochart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="insights col-md-3">
+          <div class="card d-flex align-items-stretch">
+            <div class="card-header">Insights <span class="badge badge-success">5</span></div>
+            <div class="card-body">
+              <div class="insights-placeholder text-center">
+                <div class="insights-icon">
+                  <i class="far fa-lightbulb"></i>
+                </div>
+                <div class="insights-name">
+                  <h3>Insights</h3>
+                </div>
+                <div class="insights-instructions">
+                  Insights will be displayed automatically once a search query is entered.
+                </div>
+              </div>
+              <div class="loader text-center">
+                <div class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+              <div class="insight-results">
+                <p><span class="badge badge-secondary">1</span> Fusce condimentum mollis turpis et consequat. Pellentesque vitae augue eget purus efficitur hendrerit. Sed congue molestie velit, id iaculis ligula sollicitudin eu. Maecenas leo mauris, commodo finibus elit ut, volutpat vestibulum velit. Nullam vitae cursus lectus. Donec sit amet sem elementum, pulvinar arcu vel, feugiat est. Aliquam tincidunt bibendum erat, a laoreet urna.</p>
+                <p><span class="badge badge-secondary">2</span> Nulla volutpat justo ut nisl mollis porttitor. In non enim ornare, convallis ex sed, tincidunt diam. In at enim purus. Maecenas viverra consequat arcu sed luctus. Donec molestie, purus id scelerisque efficitur, dui sem convallis ipsum, ut fermentum risus odio nec lorem. Donec vehicula faucibus justo sit amet finibus. Ut auctor neque id tincidunt efficitur.</p>
+                <p><span class="badge badge-secondary">3</span> In at turpis tellus. Curabitur pharetra urna at quam aliquam, venenatis aliquet purus porta.</p>
+                <p><span class="badge badge-secondary">4</span> Etiam efficitur maximus ex eget blandit. Nam eget iaculis tortor, ut ultrices massa. Proin ac semper libero, quis dignissim enim. Duis massa dui, elementum id nisl ultrices, molestie sollicitudin libero. Aenean vel purus augue.</p>
+                <p><span class="badge badge-secondary">5</span> Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc euismod massa nec mauris ullamcorper consectetur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent convallis nunc sit amet consectetur vulputate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/b.js"></script>
+  </body>
+</html>

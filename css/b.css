@@ -1,0 +1,100 @@
+/* Analytics A Test */
+
+/*
+ * Global
+ */
+ body {
+  font-size: .875rem;
+}
+.h1, h1 {
+  font-size: 1.75rem;
+}
+.h2, h2 {
+  font-size: 1.25rem;
+}
+.h3, h3 {
+  font-size: 1rem;
+}
+.h4, h4 {
+  font-size: .875rem;
+}
+.interactive {
+  border: 1px solid #007bff !important;
+}
+.success {
+  border: 1px solid #28a745 !important;
+}
+
+/*
+ * Content
+ */
+#main {
+  padding-top: 56px;
+  height: 100vh;
+}
+.search {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.search .form-group {
+  margin-bottom: 0;
+}
+.tips {
+  float: right;
+  line-height: 1;
+  cursor: pointer;
+}
+.results,
+.insights {
+  height: calc(100vh - 194px);
+}
+.insights {
+  padding-left: 0;
+}
+.insights .card-header .badge,
+.insight-results,
+.loader {
+  display: none;
+}
+.visualization-area,
+.insights .card {
+  height: 100%;
+}
+.visualization {
+  width: 100%;
+}
+.visualization .card-body {
+  overflow: hidden;
+}
+.visualization-placeholder .chart-type,
+.insights-placeholder .insights-icon {
+  font-size: 2rem;
+}
+.visualization-placeholder,
+.insights-placeholder,
+.loader {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.visualization-chart {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.card {
+  margin-bottom: 0;
+}
+.card-header,
+.list-group-item {
+  padding: .5rem .75rem;
+}
+.card-body {
+  padding: .75rem;
+}
+.card-body .form-group {
+  margin-bottom: 0;
+}

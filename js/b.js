@@ -4,41 +4,21 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 })
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
-$( function() {
-  $( ".draggable" ).draggable({
-    helper: 'clone',
-    snap: ".ui-droppable",
-    revert: true
-  });
-  $( ".droppable" ).droppable({
-  tolerance: 'pointer',
-  drop: function(event, ui) {
-    $(this).append(ui.draggable.clone());
-    $(this).parent().addClass("success");
-    $(this).children().addClass("success");
-    $(".visualization").addClass("success");
-    $(".visualization-placeholder").hide();
-    $(".visualization-chart").show();
-  }
-  });
-});
-
-$('.chart-type').on('change', function() {
-  if ( this.value == 'Pie Chart') {
-    $(".pie-chart").show();
-    $(".bar-chart").hide();
-  } else {
-    $(".pie-chart").hide();
-    $(".bar-chart").show();
+$("#search-input").keyup(function(e){
+  if(e.keyCode == 13) {
+    $(this).addClass("is-valid");
+    $(".visualization-placeholder, .insights-placeholder").hide();
+    $(".loader").show();
+    setTimeout( function() {
+      $(".visualization-chart, .insights .card-header .badge, .insight-results").show();
+      $(".loader").hide();
+    }, 3000 );
   }
 });
-var target = $('.chart-type option:selected').val();
-if(target == "#pie") {
-  $(".pie-chart").show();
-} else if(target == "#bar") {
-  $(".bar-chart").show();
-}
 
 /*
  * Chart
