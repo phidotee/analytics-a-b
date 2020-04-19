@@ -1,0 +1,35 @@
+/* Analytics A Test */
+
+/*
+ * Global
+ */
+ body {
+  font-size: .875rem;
+}
+.h2, h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/*
+ * Content
+ */
+.main {
+  padding-top: 56px;
+  height: 100vh;
+}
+.row,
+.col {
+  height: 100%;
+}
+.col:hover {
+  text-decoration: none;
+}
+.inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.inner .icon {
+  font-size: 2rem;
+}

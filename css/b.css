@@ -19,10 +19,10 @@
   font-size: .875rem;
 }
 .interactive {
-  border: 1px solid #007bff !important;
+  border-color: #007bff;
 }
 .success {
-  border: 1px solid #28a745 !important;
+  border-color: #28a745;
 }
 
 /*
