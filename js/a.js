@@ -1,28 +1,38 @@
 /*
  * General
  */
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-})
+if ($(window).width() > 767) {
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  })
+}
 
-$( function() {
-  $( ".draggable" ).draggable({
-    helper: 'clone',
-    snap: ".ui-droppable",
-    revert: true
+if ($(window).width() > 767) {
+  $( function() {
+    $( ".draggable" ).draggable({
+      helper: 'clone',
+      snap: ".ui-droppable",
+      revert: true
+    });
+    $( ".droppable" ).droppable({
+    tolerance: 'pointer',
+    drop: function(event, ui) {
+      $(this).append(ui.draggable.clone());
+      $(this).parent().addClass("success");
+      $(this).children().addClass("success");
+      $(".visualization").addClass("success");
+      $(".visualization-placeholder").hide();
+      $(".visualization-chart").show();
+    }
+    });
   });
-  $( ".droppable" ).droppable({
-  tolerance: 'pointer',
-  drop: function(event, ui) {
-    $(this).append(ui.draggable.clone());
-    $(this).parent().addClass("success");
-    $(this).children().addClass("success");
-    $(".visualization").addClass("success");
+} else {
+  $(".interactive").click(function() {
+    $(".visualization, .interactive").addClass("success");
     $(".visualization-placeholder").hide();
     $(".visualization-chart").show();
-  }
   });
-});
+}
 
 $('.chart-type').on('change', function() {
   if ( this.value == 'Pie Chart') {

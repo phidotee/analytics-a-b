@@ -47,8 +47,6 @@
   position: relative;
   top: 0;
   height: calc(100vh - 56px);
-  /*overflow-x: hidden;
-  overflow-y: auto;*/
 }
 .sidebar-inner .sidebar-sticky {
   padding: 15px;
@@ -82,12 +80,6 @@
 .pie-chart {
   display: none;
 }
-/*@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}*/
 
 /*
  * Content
@@ -119,4 +111,37 @@
   overflow: hidden;
   height: 100%;
   width: 100%;
+}
+
+/*
+ * Responsive
+ */
+@media only screen and (max-width : 767px) {
+  .navbar-brand {
+    font-size: .875rem;
+    margin: 0 auto;
+  }
+  .sidebar {
+    padding-top: 47px;
+    position: static;
+  }
+  .sidebar-sticky {
+    height: auto;
+  }
+  .sidebar-inner .sidebar-sticky {
+    padding: 15px 15px 0;
+  }
+  #main {
+    padding-top: 15px;
+    padding-bottom: 0;
+    height: auto;
+  }
+  .visualization-area,
+  .insights .card {
+    min-height: 50vh;
+  }
+  .insights {
+    padding-left: 15px;
+    margin-top: 15px;
+  }
 }

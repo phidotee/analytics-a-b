@@ -1,4 +1,4 @@
-/* Analytics A Test */
+/* Analytics B Test */
 
 /*
  * Global
@@ -97,4 +97,38 @@
 }
 .card-body .form-group {
   margin-bottom: 0;
+}
+.popover-body p:last-child,
+.insight-results p:last-child {
+  margin: 0;
+}
+
+/*
+ * Responsive
+ */
+@media only screen and (max-width : 767px) {
+  .navbar-brand {
+    font-size: .875rem;
+    margin: 0 auto;
+  }
+  #main {
+    padding-top: 47px;
+    padding-bottom: 15px;
+    height: auto;
+  }
+  .search .form-group label {
+    max-width: 80%;
+  }
+  .results,
+  .insights {
+    height: auto;
+  }
+  .visualization-area,
+  .insights .card {
+    min-height: 50vh;
+  }
+  .insights {
+    padding-left: 15px;
+    margin-top: 15px;
+  }
 }
