@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/a.css">
     <title>Tool A - Business Intelligence & Analytics Tools Comparision</title>
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1856502,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
@@ -25,9 +35,9 @@
                   <div class="card">
                     <div class="card-header">Dimensions</div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Horizontal"><i class="fa fa-clock fa-fw"></i> Date</li>
+                      <li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Date</li>
                       <li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Time</li>
-                      <li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Month</li>
+                      <li class="list-group-item interactive draggable"  data-toggle="tooltip" title="Drag me to Horizontal"><i class="fa fa-clock fa-fw"></i> Month</li>
                       <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> City</li>
                       <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Country</li>
                       <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Region</li>
@@ -37,9 +47,12 @@
                   <div class="card">
                     <div class="card-header">Measures</div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Horizontal"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer</li>
-                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Color By"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Amount</li>
+                      <li class="list-group-item"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer</li>
+                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Color By"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer Group</li>
+                      <li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Purchases</li>
+                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Vertical"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Sales Amount</li>
                       <li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Items</li>
+                      <li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Visits</li>
                     </ul>
                   </div>
                 </div>
@@ -51,29 +64,40 @@
                     <div class="card-header">Month</div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">
-                      <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="January">
-                    <label class="form-check-label" for="January">January 2020</label>
-                  </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="January" checked>
+                          <label class="form-check-label" for="January">January 2020</label>
+                        </div>
                       </li>
                       <li class="list-group-item">
-                      <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="February">
-                    <label class="form-check-label" for="February">February 2020</label>
-                  </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="February" checked>
+                          <label class="form-check-label" for="February">February 2020</label>
+                        </div>
                       </li>
                       <li class="list-group-item">
-                      <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="March" checked>
-                    <label class="form-check-label" for="March">March 2020</label>
-                  </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="March" checked>
+                          <label class="form-check-label" for="March">March 2020</label>
+                        </div>
                       </li>
-                      
                       <li class="list-group-item">
-                      <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="April" checked>
-                    <label class="form-check-label" for="April">April 2020</label>
-                  </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="April" checked>
+                          <label class="form-check-label" for="April">April 2020</label>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="May" checked>
+                          <label class="form-check-label" for="May">May 2020</label>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="June" checked>
+                          <label class="form-check-label" for="June">June 2020</label>
+                        </div>
                       </li>
                     </ul>
                   </div>

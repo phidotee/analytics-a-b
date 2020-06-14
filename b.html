@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/chart.min.css">
     <link rel="stylesheet" href="css/b.css">
     <title>Tool B - Business Intelligence & Analytics Tools Comparision</title>
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1856510,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
@@ -18,8 +28,11 @@
         <div class="search bg-light col-md-12 ml-sm-auto col-lg-12">
           <div class="form-group">
             <label for="search-input">Start by asking a question and press Enter once done</label>
-            <a class="tips btn btn-outline-primary btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" title="Tips" data-content="<p>Praesent sit amet sem quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Suspendisse auctor iaculis ante, nec lacinia libero.</p><p>Duis porttitor nisl eget ligula eleifend semper. Mauris fringilla tempus lacinia. Cras scelerisque tellus tellus, ullamcorper luctus risus pellentesque ac. Vestibulum ornare metus a blandit pharetra. Phasellus quis ultricies nisl.</p><p>Donec sed felis nunc. Integer ac turpis ac nulla vehicula iaculis. Suspendisse elementum auctor nunc, nec dapibus nisl. Etiam et lacus posuere, euismod orci a, rutrum massa.</p>"><i class="fas fa-question"></i> Tips</a>
+            <a class="tips btn btn-outline-primary btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" title="Tips" data-content="<p>Ask questions in natural language.</p><p>In your question include at least the dataset and time period.</p><p>You may also include commands how to display data in your question.</p>"><i class="fas fa-question"></i> Tips</a>
             <input type="text" class="form-control form-control-lg interactive" id="search-input" placeholder="What is your question? See tips for ideas.">
+            <div class="question form-control form-control-lg is-valid">
+              What was the <span class="when alert-primary">monthly</span> <span class="what alert-warning">sales volume</span> for <span class="when alert-primary">this year</span> by <span class="how alert-success">customer group</span>?
+            </div>
           </div>
         </div>
       </div>
@@ -54,7 +67,7 @@
         </div>
         <div class="insights col-md-4 col-lg-3">
           <div class="card d-flex align-items-stretch">
-            <div class="card-header">Insights <span class="badge badge-success">4</span></div>
+            <div class="card-header">Insights <span class="badge badge-secondary">5</span></div>
             <div class="card-body">
               <div class="insights-placeholder text-center">
                 <div class="insights-icon">
@@ -73,10 +86,12 @@
                 </div>
               </div>
               <div class="insight-results">
-                <p><span class="badge badge-secondary">1</span> Fusce condimentum mollis turpis et consequat. Pellentesque vitae augue eget purus efficitur hendrerit. Sed congue molestie velit, id iaculis ligula sollicitudin eu. Maecenas leo mauris, commodo finibus elit ut, volutpat vestibulum velit. Nullam vitae cursus lectus. Donec sit amet sem elementum, pulvinar arcu vel, feugiat est. Aliquam tincidunt bibendum erat, a laoreet urna.</p>
-                <p><span class="badge badge-secondary">2</span> Nulla volutpat justo ut nisl mollis porttitor. In non enim ornare, convallis ex sed, tincidunt diam. In at enim purus. Maecenas viverra consequat arcu sed luctus. Donec molestie, purus id scelerisque efficitur, dui sem convallis ipsum, ut fermentum risus odio nec lorem. Donec vehicula faucibus justo sit amet finibus. Ut auctor neque id tincidunt efficitur.</p>
-                <p><span class="badge badge-secondary">3</span> In at turpis tellus. Curabitur pharetra urna at quam aliquam, venenatis aliquet purus porta.</p>
-                <p><span class="badge badge-secondary">4</span> Etiam efficitur maximus ex eget blandit. Nam eget iaculis tortor, ut ultrices massa. Proin ac semper libero, quis dignissim enim. Duis massa dui, elementum id nisl ultrices, molestie sollicitudin libero. Aenean vel purus augue.</p>
+                <p>This chart shows the monthly sales volume for this year from January 2020 until June 2020 by customer group.</p>
+                <p><span class="badge badge-danger">1</span> General <strong>sales volumes</strong> are <strong>dropping</strong> since <strong>February 2020</strong>.</p>
+                <p><span class="badge badge-warning">2</span> Sales for <strong>all customer groups but Government (Public)</strong> have <strong>dropeed</strong> between <strong>15% - 25% on a monthly basis</strong> since February.</p>
+                <p><span class="badge badge-success">3</span> <strong>Government (Public)</strong> group sales have been increased <strong>240%</strong> since January.</p>
+                <p><span class="badge badge-warning">4</span> Either a <strong>global or company-level event</strong> seems to be <strong>affecting sales</strong> as all groups but one seem to be affected in similar manner.</p>
+                <p><span class="badge badge-danger">5</span> Biggest drop in <strong>Businesses (B2B)</strong>, where <strong>sales have dropped over 76%</strong> since January.</p>
               </div>
             </div>
           </div>

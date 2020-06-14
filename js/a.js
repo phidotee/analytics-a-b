@@ -57,23 +57,23 @@ var ctx = document.getElementById("demochart").getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["<  1","1 - 2","3 - 4","5 - 9","10 - 14","15 - 19","20 - 24","25 - 29","> - 29"],
+    labels: ["January 2020","February 2020","March 2020","April 2020","May 2020","June 2020"],
     datasets: [{
-      label: 'Employee',
+      label: 'Businesses (B2B)',
       backgroundColor: "#caf270",
-      data: [12, 59, 5, 56, 58,12, 59, 87, 45],
+      data: [52, 59, 44, 32, 21, 12],
     }, {
-      label: 'Engineer',
+      label: 'Customers (B2C)',
       backgroundColor: "#45c490",
-      data: [12, 59, 5, 56, 58,12, 59, 85, 23],
+      data: [40, 45, 35, 25, 15, 12],
     }, {
-      label: 'Government',
+      label: 'Non-government organizations (NGOs)',
       backgroundColor: "#008d93",
-      data: [12, 59, 5, 56, 58,12, 59, 65, 51],
+      data: [25, 32, 25, 20, 15, 12],
     }, {
-      label: 'Political parties',
+      label: 'Government (Public)',
       backgroundColor: "#2e5468",
-      data: [12, 59, 5, 56, 58, 12, 59, 12, 74],
+      data: [10, 15, 35, 56, 43, 34],
     }],
   },
   options: {
