@@ -1,6 +1,29 @@
 /*
  * General
  */
+var Clock = {
+  totalSeconds: 0,
+  start: function () {
+    if (!this.interval) {
+        var self = this;
+        function pad(val) { return val > 9 ? val : "0" + val; }
+        this.interval = setInterval(function () {
+          self.totalSeconds += 1;
+
+
+          $("#min").text(pad(Math.floor(self.totalSeconds / 60 % 60)));
+          $("#sec").text(pad(parseInt(self.totalSeconds % 60)));
+        }, 1000);
+    }
+  },
+  pause: function () {
+    clearInterval(this.interval);
+    delete this.interval;
+  },
+};
+
+$('#start').click(function () { Clock.start(); });
+
 if ($(window).width() > 767) {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -12,18 +35,70 @@ if ($(window).width() > 767) {
     $( ".draggable" ).draggable({
       helper: 'clone',
       snap: ".ui-droppable",
-      revert: true
+      revert: "invalid",
     });
-    $( ".droppable" ).droppable({
-    tolerance: 'pointer',
-    drop: function(event, ui) {
-      $(this).append(ui.draggable.clone());
-      $(this).parent().addClass("success");
-      $(this).children().addClass("success");
-      $(".visualization").addClass("success");
-      $(".visualization-placeholder").hide();
-      $(".visualization-chart").show();
-    }
+    $( ".droppable.horizontal" ).droppable({
+      accept: ".to-horizontal",
+      tolerance: 'pointer',
+      drop: function(event, ui) {
+        $(this).append(ui.draggable.clone());
+        if ( $('.to-horizontal','.horizontal').length == 1 || $('.to-vertical','.vertical').length == 1 || $('.to-color','.color').length == 1 ) {
+          $(this).parent().addClass("success");
+          $(this).children().addClass("success");
+        }
+        if ( $('.to-horizontal','.horizontal').length == 1 && $('.to-vertical','.vertical').length == 1 && $('.to-color','.color').length == 1 ) {
+          $(".visualization-placeholder").hide();
+          $(".loader").show();
+          setTimeout( function() {
+            $(".visualization-chart").show();
+            $(".loader").hide();
+            Clock.pause();
+            $(".timer").addClass("text-success");
+          }, 1000 );
+        }
+      }
+    });
+    $( ".droppable.vertical" ).droppable({
+      accept: ".to-vertical",
+      tolerance: 'pointer',
+      drop: function(event, ui) {
+        $(this).append(ui.draggable.clone());
+        if ( $('.to-horizontal','.horizontal').length == 1 || $('.to-vertical','.vertical').length == 1 || $('.to-color','.color').length == 1 ) {
+          $(this).parent().addClass("success");
+          $(this).children().addClass("success");
+        }
+        if ( $('.to-horizontal','.horizontal').length == 1 && $('.to-vertical','.vertical').length == 1 && $('.to-color','.color').length == 1 ) {
+          $(".visualization-placeholder").hide();
+          $(".loader").show();
+          setTimeout( function() {
+            $(".visualization-chart").show();
+            $(".loader").hide();
+            Clock.pause();
+            $(".timer").addClass("text-success");
+          }, 1000 );
+        }
+      }
+    });
+    $( ".droppable.color" ).droppable({
+      accept: ".to-color",
+      tolerance: 'pointer',
+      drop: function(event, ui) {
+        $(this).append(ui.draggable.clone());
+        if ( $('.to-horizontal','.horizontal').length == 1 || $('.to-vertical','.vertical').length == 1 || $('.to-color','.color').length == 1 ) {
+          $(this).parent().addClass("success");
+          $(this).children().addClass("success");
+        }
+        if ( $('.to-horizontal','.horizontal').length == 1 && $('.to-vertical','.vertical').length == 1 && $('.to-color','.color').length == 1 ) {
+          $(".visualization-placeholder").hide();
+          $(".loader").show();
+          setTimeout( function() {
+            $(".visualization-chart").show();
+            $(".loader").hide();
+            Clock.pause();
+            $(".timer").addClass("text-success");
+          }, 1000 );
+        }
+      }
     });
   });
 } else {
@@ -32,6 +107,14 @@ if ($(window).width() > 767) {
     $(".visualization-placeholder").hide();
     $(".visualization-chart").show();
   });
+}
+
+if ( $('.to-horizontal','.horizontal').length == 1 && $('.to-vertical','.vertical').length == 1 && $('.to-color','.color').length == 1 ) {
+  $(".visualization-placeholder").hide();
+  $(".visualization-chart").show();
+  $(".visualization").addClass("success");
+  Clock.pause();
+  $(".timer").addClass("text-success");
 }
 
 $('.chart-type').on('change', function() {
@@ -49,6 +132,8 @@ if(target == "#pie") {
 } else if(target == "#bar") {
   $(".bar-chart").show();
 }
+
+$('#info').modal('show');
 
 /*
  * Chart

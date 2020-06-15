@@ -23,6 +23,7 @@
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
       <a class="navbar-brand">Business Intelligence & Analytics Tool A</a>
+      <div class="timer text-white pull-right">Timer <strong><span id="min">00</span>:<span id="sec">00</span></strong></div>
     </nav>
     <div class="container-fluid">
       <div class="row">
@@ -37,7 +38,7 @@
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Date</li>
                       <li class="list-group-item"><i class="fa fa-clock fa-fw"></i> Time</li>
-                      <li class="list-group-item interactive draggable"  data-toggle="tooltip" title="Drag me to Horizontal"><i class="fa fa-clock fa-fw"></i> Month</li>
+                      <li class="list-group-item interactive draggable to-horizontal"  data-toggle="tooltip" title="Drag me to Horizontal"><i class="fa fa-clock fa-fw"></i> Month</li>
                       <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> City</li>
                       <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Country</li>
                       <li class="list-group-item"><i class="fa fa-globe-europe fa-fw" aria-hidden="true"></i> Region</li>
@@ -48,9 +49,9 @@
                     <div class="card-header">Measures</div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer</li>
-                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Color By"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer Group</li>
+                      <li class="list-group-item interactive draggable to-color" data-toggle="tooltip"title="Drag me to Color By"><i class="fa fa-ruler-vertical fa-fw" aria-hidden="true"></i> Customer Group</li>
                       <li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Purchases</li>
-                      <li class="list-group-item interactive draggable" data-toggle="tooltip"title="Drag me to Vertical"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Sales Amount</li>
+                      <li class="list-group-item interactive draggable to-vertical" data-toggle="tooltip"title="Drag me to Vertical"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Sales Amount</li>
                       <li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Items</li>
                       <li class="list-group-item"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Number of Visits</li>
                     </ul>
@@ -119,17 +120,17 @@
                   </div>
                   <div class="card bar-chart interactive">
                     <div class="card-header ">Vertical</div>
-                    <div class="card-body droppable">
+                    <div class="card-body droppable vertical">
                     </div>
                   </div>
                   <div class="card bar-chart interactive">
                     <div class="card-header">Horizontal</div>
-                    <div class="card-body droppable">
+                    <div class="card-body droppable horizontal">
                     </div>
                   </div>
                   <div class="card interactive">
                     <div class="card-header">Color By</div>
-                    <div class="card-body droppable">
+                    <div class="card-body droppable color">
                     </div>
                   </div>
                   <div class="card pie-chart">
@@ -168,6 +169,11 @@
                     Add one or more attributes and one or more metrics to create a chart.
                   </div>
                 </div>
+                <div class="loader text-center">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
                 <div class="visualization-chart">
                   <canvas class="w-100" width="100%" height="80%" id="demochart"></canvas>
                 </div>
@@ -175,6 +181,26 @@
             </div>
           </div>
         </main>
+      </div>
+    </div>
+    <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Prototype Testing - Tool A</h5>
+          </div>
+          <div class="modal-body text-justify">
+            <p>Welcome to Business Intelligence & Analytics Tool A prototype testing.</p>
+            <p>You need to complete a task to display the correct visual chart for the following problem:</p>
+            <p><strong>What was the monthly sales volume for this year by user group?</strong></p>
+            <p>Elements marked in <span class="text-primary">blue</span> are interactive and can be used to complete the exercise.</p>
+            <p>Exercise is complete once the chart is shown. Please note the time to complete the exercise in the upper right corner and log it in the questionnaire.</p>
+            <p>This testing session is being recorded with Hotjar program for analysis purposes.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="start">Start</button>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/jquery.min.js"></script>

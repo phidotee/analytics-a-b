@@ -112,6 +112,15 @@
   height: 100%;
   width: 100%;
 }
+.loader {
+  display: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal-body p:last-child {
+  margin-bottom: 0;
+}
 
 /*
  * Responsive

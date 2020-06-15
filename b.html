@@ -22,6 +22,7 @@
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
       <a class="navbar-brand">Business Intelligence & Analytics Tool B</a>
+      <div class="timer text-white pull-right">Timer <strong><span id="min">00</span>:<span id="sec">00</span></strong></div>
     </nav>
     <div id="main" role="main" class="container-fluid">
       <div class="row">
@@ -88,12 +89,32 @@
               <div class="insight-results">
                 <p>This chart shows the monthly sales volume for this year from January 2020 until June 2020 by customer group.</p>
                 <p><span class="badge badge-danger">1</span> General <strong>sales volumes</strong> are <strong>dropping</strong> since <strong>February 2020</strong>.</p>
-                <p><span class="badge badge-warning">2</span> Sales for <strong>all customer groups but Government (Public)</strong> have <strong>dropeed</strong> between <strong>15% - 25% on a monthly basis</strong> since February.</p>
-                <p><span class="badge badge-success">3</span> <strong>Government (Public)</strong> group sales have been increased <strong>240%</strong> since January.</p>
+                <p><span class="badge badge-danger">2</span> Biggest drop in <strong>Businesses (B2B)</strong>, where <strong>sales have dropped over 76%</strong> since January.</p>
+                <p><span class="badge badge-warning">3</span> Sales for <strong>all customer groups but Government (Public)</strong> have <strong>dropeed</strong> between <strong>15% - 25% on a monthly basis</strong> since February.</p>
                 <p><span class="badge badge-warning">4</span> Either a <strong>global or company-level event</strong> seems to be <strong>affecting sales</strong> as all groups but one seem to be affected in similar manner.</p>
-                <p><span class="badge badge-danger">5</span> Biggest drop in <strong>Businesses (B2B)</strong>, where <strong>sales have dropped over 76%</strong> since January.</p>
+                <p><span class="badge badge-success">5</span> <strong>Government (Public)</strong> group sales have been increased <strong>240%</strong> since January.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Prototype Testing - Tool B</h5>
+          </div>
+          <div class="modal-body text-justify">
+            <p>Welcome to Business Intelligence & Analytics Tool B prototype testing.</p>
+            <p>You need to complete a task to display the correct visual chart for the following problem:</p>
+            <p><strong>What was the monthly sales volume for this year by user group?</strong></p>
+            <p>Elements marked in <span class="text-primary">blue</span> are interactive and can be used to complete the exercise.</p>
+            <p>Exercise is complete once the chart is shown. Please note the time to complete the exercise in the upper right corner and log it in the questionnaire.</p>
+            <p>This testing session is being recorded with Hotjar program for analysis purposes.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="start">Start</button>
           </div>
         </div>
       </div>

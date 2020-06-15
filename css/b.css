@@ -110,6 +110,9 @@
   border-style: solid;
   border-radius: .25rem;
 }
+.modal-body p:last-child {
+  margin-bottom: 0;
+}
 
 /*
  * Responsive
