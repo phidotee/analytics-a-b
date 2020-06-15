@@ -66,6 +66,7 @@
 }
 .visualization .card-body {
   overflow: hidden;
+  position: relative;
 }
 .visualization-placeholder .chart-type,
 .insights-placeholder .insights-icon {
@@ -74,16 +75,20 @@
 .visualization-placeholder,
 .insights-placeholder,
 .loader {
-  position: relative;
+  position: absolute;
   top: 50%;
+  left: .75rem;
+  right: .75rem;
   transform: translateY(-50%);
 }
 .visualization-chart {
   display: none;
-  position: relative;
+  position: absolute;
+  top: .75rem;
+  bottom: .75rem;
+  left: .75rem;
+  right: .75rem;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
 }
 .card {
   margin-bottom: 0;
@@ -104,6 +109,7 @@
 }
 .question {
   display: none;
+  height: auto;
 }
 .question span {
   border-width: 1px;
@@ -120,7 +126,6 @@
 @media only screen and (max-width : 767px) {
   .navbar-brand {
     font-size: .875rem;
-    margin: 0 auto;
   }
   #main {
     padding-top: 47px;
