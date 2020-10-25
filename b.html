@@ -11,18 +11,25 @@
     <script>
       (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1856510,hjsv:6};
+        h._hjSettings={hjid:2021433,hjsv:6};
         a=o.getElementsByTagName('head')[0];
         r=o.createElement('script');r.async=1;
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FB4MVCLSMF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FB4MVCLSMF');
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
       <a class="navbar-brand">Business Intelligence & Analytics Tool B</a>
-      <div class="timer text-white pull-right">Timer <strong><span id="min">00</span>:<span id="sec">00</span></strong></div>
+      <div class="text-white pull-right">Code: <span class="code"></span></div>
     </nav>
     <div id="main" role="main" class="container-fluid">
       <div class="row">
@@ -30,7 +37,7 @@
           <div class="form-group">
             <label for="search-input">Start by asking a question and press Enter once done</label>
             <a class="tips btn btn-outline-primary btn-sm" data-toggle="popover" data-placement="bottom" data-html="true" title="Tips" data-content="<p>Ask questions in natural language.</p><p>In your question include at least the dataset and time period.</p><p>You may also include commands how to display data in your question.</p>"><i class="fas fa-question"></i> Tips</a>
-            <input type="text" class="form-control form-control-lg interactive" id="search-input" placeholder="What is your question? See tips for ideas.">
+            <input type="text" class="form-control form-control-lg interactive" id="search-input" placeholder="What is your question? See tips for ideas." data-hj-whitelist>
             <div class="question form-control form-control-lg is-valid">
               What was the <span class="when alert-primary">monthly</span> <span class="what alert-warning">sales volume</span> for <span class="when alert-primary">this year</span> by <span class="how alert-success">customer group</span>?
             </div>
@@ -87,12 +94,14 @@
                 </div>
               </div>
               <div class="insight-results">
+                <h2>Explanation</h2>
                 <p>This chart shows the monthly sales volume for this year from January 2020 until June 2020 by customer group.</p>
-                <p><span class="badge badge-danger">1</span> General <strong>sales volumes</strong> are <strong>dropping</strong> since <strong>February 2020</strong>.</p>
-                <p><span class="badge badge-danger">2</span> Biggest drop in <strong>Businesses (B2B)</strong>, where <strong>sales have dropped over 76%</strong> since January.</p>
-                <p><span class="badge badge-warning">3</span> Sales for <strong>all customer groups but Government (Public)</strong> have <strong>dropeed</strong> between <strong>15% - 25% on a monthly basis</strong> since February.</p>
-                <p><span class="badge badge-warning">4</span> Either a <strong>global or company-level event</strong> seems to be <strong>affecting sales</strong> as all groups but one seem to be affected in similar manner.</p>
-                <p><span class="badge badge-success">5</span> <strong>Government (Public)</strong> group sales have been increased <strong>240%</strong> since January.</p>
+                <h2>Insights</h2>
+                <p><span class="badge badge-danger">1</span> General sales volumes are dropping since February 2020.</p>
+                <p><span class="badge badge-danger">2</span> Biggest drop in <strong>Businesses (B2B)</strong>, where sales have dropped over <span class="what alert-danger">76%</span> since January.</p>
+                <p><span class="badge badge-warning">3</span> Sales for all customer groups but <strong>Government (Public)</strong> have dropped between <span class="what alert-warning">15% - 25%</span> on a monthly basis since February.</p>
+                <p><span class="badge badge-warning">4</span> Either a global or organisation-level event seems to be affecting sales as all groups but one seem to be affected in similar manner.</p>
+                <p><span class="badge badge-success">5</span> <strong>Government (Public)</strong> group sales have been increased <span class="what alert-success">240%</span> since January.</p>
               </div>
             </div>
           </div>
@@ -108,9 +117,10 @@
           <div class="modal-body text-justify">
             <p>Welcome to Business Intelligence & Analytics Tool B prototype testing.</p>
             <p>You need to complete a task to display the correct visual chart for the following problem:</p>
-            <p><strong>What was the monthly sales volume for this year by user group?</strong></p>
+            <p class="lead"><strong>What was the monthly sales volume for this year by user group?</strong></p>
             <p>Elements marked in <span class="text-primary">blue</span> are interactive and can be used to complete the exercise.</p>
-            <p>Exercise is complete once the chart is shown. Please note the time to complete the exercise in the upper right corner and log it in the questionnaire.</p>
+            <p>Exercise is complete once the data visualization is shown.</p>
+            <p><strong>Please note the exercise code in the upper right corner and log it in the questionnaire.</strong></p>
             <p>This testing session is being recorded with Hotjar program for analysis purposes.</p>
           </div>
           <div class="modal-footer">

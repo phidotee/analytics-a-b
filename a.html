@@ -12,18 +12,25 @@
     <script>
       (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1856502,hjsv:6};
+        h._hjSettings={hjid:2021430,hjsv:6};
         a=o.getElementsByTagName('head')[0];
         r=o.createElement('script');r.async=1;
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-86L41RC6HL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-86L41RC6HL');
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
       <a class="navbar-brand">Business Intelligence & Analytics Tool A</a>
-      <div class="timer text-white pull-right">Timer <strong><span id="min">00</span>:<span id="sec">00</span></strong></div>
+      <div class="text-white pull-right">Code: <span class="code"></span></div>
     </nav>
     <div class="container-fluid">
       <div class="row">
@@ -62,42 +69,12 @@
                 <div class="sidebar-sticky">
                   <h4><i class="fas fa-filter"></i> Filter</h4>
                   <div class="card">
-                    <div class="card-header">Month</div>
+                    <div class="card-header">Year</div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="January" checked>
-                          <label class="form-check-label" for="January">January 2020</label>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="February" checked>
-                          <label class="form-check-label" for="February">February 2020</label>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="March" checked>
-                          <label class="form-check-label" for="March">March 2020</label>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="April" checked>
-                          <label class="form-check-label" for="April">April 2020</label>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="May" checked>
-                          <label class="form-check-label" for="May">May 2020</label>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="June" checked>
-                          <label class="form-check-label" for="June">June 2020</label>
+                          <input class="form-check-input" type="checkbox" value="" id="2020" checked disabled>
+                          <label class="form-check-label" for="2020">2020</label>
                         </div>
                       </li>
                     </ul>
@@ -192,9 +169,10 @@
           <div class="modal-body text-justify">
             <p>Welcome to Business Intelligence & Analytics Tool A prototype testing.</p>
             <p>You need to complete a task to display the correct visual chart for the following problem:</p>
-            <p><strong>What was the monthly sales volume for this year by user group?</strong></p>
+            <p class="lead"><strong>What was the monthly sales volume for this year by user group?</strong></p>
             <p>Elements marked in <span class="text-primary">blue</span> are interactive and can be used to complete the exercise.</p>
-            <p>Exercise is complete once the chart is shown. Please note the time to complete the exercise in the upper right corner and log it in the questionnaire.</p>
+            <p>Exercise is complete once the data visualization is shown.</p>
+            <p><strong>Please note the exercise code in the upper right corner and log it in the questionnaire.</strong></p>
             <p>This testing session is being recorded with Hotjar program for analysis purposes.</p>
           </div>
           <div class="modal-footer">

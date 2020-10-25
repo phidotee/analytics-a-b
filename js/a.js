@@ -22,6 +22,9 @@ var Clock = {
   },
 };
 
+var code = Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8);
+$('.code').text(code);
+
 $('#start').click(function () { Clock.start(); });
 
 if ($(window).width() > 767) {

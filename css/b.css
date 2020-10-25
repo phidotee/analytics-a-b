@@ -24,6 +24,10 @@
 .success {
   border-color: #28a745;
 }
+.code {
+  font-weight: bold;
+  color: red;
+}
 
 /*
  * Content
@@ -66,6 +70,7 @@
 }
 .visualization .card-body {
   overflow: hidden;
+  position: relative;
 }
 .visualization-placeholder .chart-type,
 .insights-placeholder .insights-icon {
@@ -74,16 +79,20 @@
 .visualization-placeholder,
 .insights-placeholder,
 .loader {
-  position: relative;
+  position: absolute;
   top: 50%;
+  left: .75rem;
+  right: .75rem;
   transform: translateY(-50%);
 }
 .visualization-chart {
   display: none;
-  position: relative;
+  position: absolute;
+  top: .75rem;
+  bottom: .75rem;
+  left: .75rem;
+  right: .75rem;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
 }
 .card {
   margin-bottom: 0;
@@ -104,14 +113,19 @@
 }
 .question {
   display: none;
+  height: auto;
 }
-.question span {
+.question span,
+.insight-results span {
   border-width: 1px;
   border-style: solid;
   border-radius: .25rem;
 }
 .modal-body p:last-child {
   margin-bottom: 0;
+}
+.insights .card-body {
+  overflow-y: auto;
 }
 
 /*
@@ -120,7 +134,6 @@
 @media only screen and (max-width : 767px) {
   .navbar-brand {
     font-size: .875rem;
-    margin: 0 auto;
   }
   #main {
     padding-top: 47px;
@@ -141,5 +154,13 @@
   .insights {
     padding-left: 15px;
     margin-top: 15px;
+  }
+}
+@media only screen and (max-width : 440px) {
+  #main {
+    padding-top: 68px;
+  }
+  .navbar {
+    height: 68px;
   }
 }

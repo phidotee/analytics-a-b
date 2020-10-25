@@ -24,6 +24,10 @@
 .success {
   border: 1px solid #28a745 !important;
 }
+.code {
+  font-weight: bold;
+  color: red;
+}
 
 /*
  * Sidebar
@@ -38,7 +42,7 @@
 }
 .sidebar-inner {
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-  padding: 0
+  padding: 0;
 }
 .sidebar-inner.first {
   padding-left: 0;
@@ -96,26 +100,33 @@
 }
 .visualization .card-body {
   overflow: hidden;
+  position: relative;
 }
 .visualization-placeholder .chart-type {
   font-size: 2rem;
 }
 .visualization-placeholder {
-  position: relative;
+  position: absolute;
   top: 50%;
+  left: .75rem;
+  right: .75rem;
   transform: translateY(-50%);
 }
 .visualization-chart {
   display: none;
-  position: relative;
+  position: absolute;
+  top: .75rem;
+  bottom: .75rem;
+  left: .75rem;
+  right: .75rem;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
 }
 .loader {
   display: none;
-  position: relative;
+  position: absolute;
   top: 50%;
+  left: .75rem;
+  right: .75rem;
   transform: translateY(-50%);
 }
 .modal-body p:last-child {
@@ -128,7 +139,6 @@
 @media only screen and (max-width : 767px) {
   .navbar-brand {
     font-size: .875rem;
-    margin: 0 auto;
   }
   .sidebar {
     padding-top: 47px;
@@ -152,5 +162,13 @@
   .insights {
     padding-left: 15px;
     margin-top: 15px;
+  }
+}
+@media only screen and (max-width : 440px) {
+  .sidebar {
+    padding-top: 68px;
+  }
+  .navbar {
+    height: 68px;
   }
 }
